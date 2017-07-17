@@ -17,7 +17,7 @@
     "cookie-parser": "^1.4.3",
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
-    "express": "^4.15.3",
+    "express": "^4.15.1",
     "express-session": "^1.15.3",
     "govuk-elements-sass": "^3.1.1",
     "govuk_frontend_toolkit": "^7.0.0",
@@ -35,7 +35,7 @@
     "gulp-uglify": "^3.0.0",
     "gulp-eslint": "^3.0.1",
     "gulp-util": "^3.0.8",
-    "nunjucks": "^3.0.1",
+    "nunjucks": "^3.0.0",
     "require-dir": "^0.3.2",
     "run-sequence": "^2.0.0",
     "gulp-data": "^1.2.1"
