@@ -33,7 +33,7 @@
 
   <div class="check-answers">
 
-    <h2 class="heading-medium">Your details</h2>
+    <h2 class="heading-medium" id="your-details">Your details</h2>
 
     <table class="table">
       <caption class="visually-hidden">Your details</caption>
@@ -67,13 +67,13 @@
       </tr>
     </table>
 
-    <p class="check-answers-action"><a href="/your-details">Change<span class="visually-hidden"> answers for &ldquo;Your details&rdquo;.</span></a></p>
+    <p class="check-answers-action"><a href="/your-details" aria-labelledby="your-details">Change</a></p>
 
   </div>
 
   <div class="check-answers">
 
-    <h2 class="heading-medium">Your plea</h2>
+    <h2 class="heading-medium" id="your-plea">Your plea</h2>
 
     <table class="table">
       <caption class="visually-hidden">Your plea</caption>
@@ -91,7 +91,7 @@
       </tr>
     </table>
 
-    <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
+    <p class="check-answers-action"><a href="/your-plea" aria-labelledby="your-plea">Change</a></p>
 
   </div>
 
@@ -101,7 +101,7 @@
 
     <div class="check-answers">
 
-      <h3 class="bold-small">Employment</h3>
+      <h3 class="bold-small" id="your-employment">Employment</h3>
 
       <table class="table">
         <caption class="visually-hidden">Your employment</caption>
@@ -119,13 +119,13 @@
         </tr>
       </table>
 
-      <p class="check-answers-action"><a href="/employment">Change<span class="visually-hidden"> answers for &ldquo;Your finances&rdquo;.</span></a></p>
+      <p class="check-answers-action"><a href="/employment" aria-labelledby="your-employment">Change</a></p>
 
     </div>
 
     <div class="check-answers">
 
-      <h3 class="bold-small">Your outgoings</h3>
+      <h3 class="bold-small" id="your-outgoings">Your outgoings</h3>
 
       <table class="table">
         <caption class="visually-hidden">Your outgoings</caption>
@@ -135,7 +135,7 @@
         </tr>
       </table>
 
-      <p class="check-answers-action"><a href="/your-outgoings">Change<span class="visually-hidden"> answers for &ldquo;Your outgoings&rdquo;.</span></a></p>
+      <p class="check-answers-action"><a href="/your-outgoings" aria-labelledby="your-outgoings">Change</a></p>
 
     </div>
 
