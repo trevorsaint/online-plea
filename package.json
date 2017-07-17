@@ -37,13 +37,10 @@
     "gulp-util": "^3.0.8",
     "nunjucks": "^3.0.1",
     "require-dir": "^0.3.2",
-    "run-sequence": "^2.0.0"
+    "run-sequence": "^2.0.0",
+    "gulp-data": "^1.2.1"
   },
   "scripts": {
-    "gulp-build": "gulp build",
-    "gulp-develop": "gulp develop"
-  },
-  "devDependencies": {
-    "gulp-data": "^1.2.1"
+    "start": "node server.js"
   }
 }
