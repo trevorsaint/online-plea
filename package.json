@@ -40,7 +40,8 @@
     "run-sequence": "^2.0.0"
   },
   "scripts": {
-    "start": "gulp develop"
+    "gulp-build": "gulp build",
+    "gulp-develop": "gulp develop"
   },
   "devDependencies": {
     "gulp-data": "^1.2.1"
