@@ -1,0 +1,122 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label-bold">Would you like to give details of your monthly bills?</span>
+              <span class="form-hint">Magistrates can take your outgoings into account when deciding how long you should get to pay a penalty</span>
+            </legend>
+
+            <div class="multiple-choice" data-target="monthly-bills">
+              <input id="outgoings-yes" name="outgoings" type="radio" value="Yes">
+              <label for="outgoings-yes">Yes</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="outgoings-no" name="outgoings" type="radio" value="No">
+              <label for="outgoings-no">No</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="monthly-bills">
+
+              <p>What are your monthly bills for the following?</p>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-accomodation">
+                  Accomodation
+                  <span class="form-hint">For example, rent, mortgage or lodgings</span>
+                </label>
+                <div class="form-currency">
+                  <input class="form-control form-control-1-4" id="outgoings-accomodation" name="outgoingsAccomodation" type="number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-council-tax">
+                  Council tax
+                </label>
+                <div class="form-currency">
+                  <input class="form-control form-control-1-4" id="outgoings-council-tax" name="outgoingsCouncilTax" type="number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-household-bills">
+                  Household bills
+                  <span class="form-hint">For example, gas, electricity, water, insurance</span>
+                </label>
+                <div class="form-currency">
+                  <input class="form-control form-control-1-4" id="outgoings-household-bills" name="outgoingsHouseholdBills" type="number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-travel-expenses">
+                  Travel expenses
+                  <span class="form-hint">For example, fuel, car, public transport</span>
+                </label>
+                <div class="form-currency">
+                  <input class="form-control form-control-1-4" id="outgoings-travel-expenses" name="outgoingsTravelExpenses" type="number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-child-maintenance">
+                  Child maintenance
+                </label>
+                <div class="form-currency">
+                  <input class="form-control form-control-1-4" id="outgoings-child-maintenance" name="outgoingsChildMaintenance" type="number">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label-bold" for="outgoings-other">
+                  Any other significant outgoings not listed?
+                  <span class="form-hint">List any other outgoings or information you believe the court should know about</span>
+                </label>
+                <textarea class="form-control form-control-3-4" id="outgoings-other" name="outgoingsOther" cols="30" rows="4"></textarea>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

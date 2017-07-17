@@ -1,0 +1,17 @@
+/*
+Alerts
+*/
+
+$module: "alert";
+
+.#{$module} {
+  margin-top: em(40);
+  padding: em(38) 0 em(19);
+  text-align: center;
+
+  &--submitted {
+    background-color: $turquoise;
+    color: $white;
+  }
+
+}

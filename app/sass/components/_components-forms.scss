@@ -1,0 +1,42 @@
+/*
+Forms
+*/
+
+$module: "form";
+
+.#{$module} {
+
+  // control for qty controls
+  .#{$module}-control-qty {
+    margin-right: em(5);
+  }
+
+  // currency controls
+  &-currency {
+    display: block;
+    position: relative;
+
+    .#{$module}-control {
+      padding-left: em(34);
+    }
+
+    &:before {
+      color: inherit;
+      content: "\00a3";
+      display: inline-block;
+      font-size: inherit;
+      font-weight: 600;
+      left: em(12); top: 50%;
+      position: absolute;
+      text-align: center;
+      vertical-align: middle;
+
+      // IE9 Support and above
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+
+  }
+
+}

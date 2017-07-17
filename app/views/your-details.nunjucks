@@ -1,0 +1,254 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <form class="form" method="post" novalidate>
+
+        <h2 class="heading-medium">Check your name and address</h2>
+
+        <div class="panel panel-border-wide" role="note" aria-label="Information">
+          <p>
+            <b>{{firstName}} {{lastName}}</b><br>
+            {{address1}}<br>
+            {{town}}<br>
+            {{postcode}}
+          </p>
+        </div>
+
+        <fieldset class="inline">
+
+          <legend>
+            <span class="form-label-bold">Are these details correct?</span>
+          </legend>
+
+          <div class="form-group">
+
+            <div class="multiple-choice">
+              <input id="details-correct-yes" name="detailsCorrect" type="radio" value="Yes">
+              <label for="details-correct-yes">Yes<span class="visually-hidden">, these details are correct</span></label>
+            </div>
+
+            <div class="multiple-choice" data-target="details-correct">
+              <input id="details-correct-no" name="detailsCorrect" type="radio" value="No">
+              <label for="details-correct-no">No<span class="visually-hidden">, these details are incorrect</span></label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="details-correct">
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">Changes to name</span>
+                  </legend>
+
+                  <p class="text-secondary">The court will check any name changes</p>
+
+                  <div class="form-group form-group-related">
+                    <label class="form-label" for="first-name">
+                      First name
+                    </label>
+                    <input class="form-control form-control-2-3" id="first-name" name="firstName" type="text" value="{{firstName}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="last-name">
+                      Last name
+                    </label>
+                    <input class="form-control form-control-2-3" id="last-name" name="lastName" type="text" value="{{lastName}}">
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+              <div class="form-group">
+
+                <fieldset>
+
+                  <legend>
+                    <span class="form-label-bold">Changes to address</span>
+                  </legend>
+
+                  <p class="text-secondary">The court will check your change of address</p>
+
+                  <div class="form-group form-group-compound">
+                    <label class="form-label" for="address-line-1">
+                      Building and street
+                    </label>
+                    <input class="form-control form-control-2-3" id="address-line-1" name="addressLine1" type="text" value="{{address1}}">
+                  </div>
+
+                  <div class="form-group form-group-compound">
+                    <label class="visually-hidden" for="address-line-2">
+                      Building and street address line 2
+                    </label>
+                    <input class="form-control form-control-2-3" id="address-line-2" name="addressLine2" type="text" value="{{address2}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="visually-hidden" for="address-line-3">
+                      Building and street address line 3
+                    </label>
+                    <input class="form-control form-control-2-3" id="address-line-3" name="addressLine3" type="text" value="{{address3}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="town-or-city">
+                      Town or city
+                    </label>
+                    <input class="form-control" id="town-or-city" name="townOrCity" type="text" value="{{town}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="county">
+                      County (optional)
+                    </label>
+                    <input class="form-control" id="county" name="county" type="text" value="{{county}}">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="postcode">
+                      Postcode
+                    </label>
+                    <input class="form-control form-control-1-4" id="postcode" name="postcode" type="text" value="{{postcode}}">
+                  </div>
+
+                </fieldset>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <h2 class="heading-medium">Enter other details</h2>
+
+        <fieldset>
+
+          <legend>
+            <span class="form-label-bold">Contact numbers</span>
+          </legend>
+
+          <p class="text-secondary">The court may need to contact you so they can resolve your case quickly &ndash; enter at least one number</p>
+
+          <div class="form-group">
+            <label class="form-label" for="home-telephone">
+              Home telephone
+            </label>
+            <input class="form-control" id="home-telephone" name="homeTelephone" type="tel" value="{{homeTelephone}}">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="mobile-telephone">
+              Mobile
+            </label>
+            <input class="form-control" id="mobile-telephone" name="mobileTelephone" type="tel" value="{{mobile}}">
+          </div>
+
+        </fieldset>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="email-address">
+            Email address
+            <span class="form-hint">We&rsquo;ll automatically email you a copy of your plea</span>
+          </label>
+          <input class="form-control form-control-2-3" id="email-address" name="emailAddress" type="email" value="{{emailAddress}}">
+        </div>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <span class="form-label-bold">Your date of birth</span>
+              <span class="form-hint">For example, 18 5 1987</span>
+            </legend>
+
+            <div class="form-date">
+
+              <div class="form-group form-group-day">
+                <label class="form-label" for="dob-day">Day</label>
+                <input class="form-control" id="dob-day" name="dob-day" type="number" value="{{dateOfBirthDay}}">
+              </div>
+
+              <div class="form-group form-group-month">
+                <label class="form-label" for="dob-month">Month</label>
+                <input class="form-control" id="dob-month" name="dob-month" type="number" value="{{dateOfBirthMonth}}">
+              </div>
+
+              <div class="form-group form-group-year">
+                <label class="form-label" for="dob-year">Year</label>
+                <input class="form-control" id="dob-year" name="dob-year" type="number" value="{{dateOfBirthYear}}">
+              </div>
+
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <fieldset class="inline">
+
+          <legend>
+            <span class="form-label-bold">Do you have a National Insurance number?</span>
+          </legend>
+
+          <div class="form-group">
+
+            <div class="multiple-choice" data-target="ni-number">
+              <input id="ni-number-yes" name="niNumber" type="radio" value="Yes" checked>
+              <label for="ni-number-yes">Yes<span class="visually-hidden">, I have a National Insurance number</span></label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="ni-number-no" name="niNumber" type="radio" value="No">
+              <label for="ni-number-no">No<span class="visually-hidden">, I don&rsquo;t have a National Insurance number</span></label>
+            </div>
+
+            <div class="panel  panel-border-narrow  js-hidden" id="ni-number">
+              <label class="form-label" for="national-insurance-number">
+                National Insurance number
+                <span class="form-hint">It&rsquo;s on your National Insurance card, benefit letter, payslip or P60 &ndash; for example, V0 12 34 56 D</span>
+              </label>
+              <input class="form-control" id="national-insurance-number" name="nationalInsuranceNumber" type="text" value="{{nationalInsuranceNumber}}">
+            </div>
+
+          </div>
+
+        </fieldset>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

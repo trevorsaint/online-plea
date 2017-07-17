@@ -1,0 +1,72 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group">
+
+          <label class="form-label-bold" for="average-monthly-income">
+            Enter your average monthly income (after tax)
+            <span class="form-hint">Include earnings or pension but not benefits</span>
+          </label>
+
+          <div class="form-currency">
+            <input class="form-control form-control-1-4" id="average-monthly-income" name="averageMonthlyIncome" type="text">
+          </div>
+
+        </div>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label-bold">Are you claiming Jobseeker&rsquo;s Allowance, Income Support, Universal Credit or Employment Support Allowance?</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="claiming-benefits-yes" name="claimingBenefits" type="radio" value="Yes">
+              <label for="claiming-benefits-yes">Yes</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="claiming-benefits-no" name="claimingBenefits" type="radio" value="No">
+              <label for="claiming-benefits-no">No</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

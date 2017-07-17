@@ -1,0 +1,151 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <p>Provide information for magistrates ahead of your court hearing.</p>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="why-not-guilty">Why do you believe you&rsquo;re not guilty?</label>
+          <textarea class="form-control form-control-3-4" id="why-not-guilty" name="whyNotGuilty" rows="4"></textarea>
+        </div>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label-bold">Do you need an interpreter in court?</span>
+            </legend>
+
+            <div class="multiple-choice" data-target="interpreter-language">
+              <input id="interpreter-in-court-yes" name="interpreterInCourt" type="radio" value="Yes">
+              <label for="interpreter-in-court-yes">Yes <span class="visually-hidden">I need an interpreter in court</span></label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="interpreter-in-court-no" name="interpreterInCourt" type="radio" value="No">
+              <label for="interpreter-in-court-no">No <span class="visually-hidden">I don&rsquo;t need an interpreter in court</span></label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="interpreter-language">
+              <label class="form-label" for="interpreter-in-court-language">
+                Which language?
+                <span class="form-hint">You can include sign language</span>
+              </label>
+              <input class="form-control" id="interpreter-in-court-language" name="interpreterInCourtLanguage" type="text">
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <h2 class="heading-medium">Witnesses</h2>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label-bold">Do you agree with the witness statement sent in your notice?</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="witness-statement-yes" name="witnessStatement" type="radio" value="Yes">
+              <label for="witness-statement-yes">Yes <span class="visually-hidden">I agree with the witness statement</span></label>
+            </div>
+
+            <div class="multiple-choice" data-target="witness-statement">
+              <input id="witness-statement-no" name="witnessStatement" type="radio" value="No">
+              <label for="witness-statement-no">No <span class="visually-hidden">I don&rsquo;t agree with the witness statement</span></label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="witness-statement">
+
+              <div class="form-group">
+                <label class="form-label" for="witness-statement-details">
+                  Enter the name of the witness and what you disagree with
+                </label>
+                <textarea class="form-control form-control-3-4" id="witness-statement-details" name="witnessStatementDetails" rows="4"></textarea>
+              </div>
+
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+
+          <fieldset class="inline">
+
+            <legend>
+              <span class="form-label-bold">Do you want to bring your own witness?</span>
+              <span class="form-hint">Someone who can give evidence in court supporting your case</span>
+            </legend>
+
+            <div class="multiple-choice" data-target="own-witness">
+              <input id="own-witness-yes" name="ownWitness" type="radio" value="Yes">
+              <label for="own-witness-yes">Yes <span class="visually-hidden">I want to bring my own witness</span></label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="own-witness-no" name="ownWitness" type="radio" value="No">
+              <label for="own-witness-no">No <span class="visually-hidden">I don&rsquo;t want to bring my own witness</span></label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="own-witness">
+
+              <div class="form-group">
+                <label class="form-label" for="own-witness-details">
+                  Enter the name, address and date of birth of of your witness
+                </label>
+                <textarea class="form-control form-control-3-4" id="own-witness-details" name="ownWitnessDetails" rows="4"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="own-witness-language">
+                  If your witness needs an interpretor which language? (optional)
+                  <span class="form-hint">You can include sign language</span>
+                </label>
+                <input class="form-control" id="own-witness-language" name="ownWitnessLanguage" type="text">
+              </div>
+
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

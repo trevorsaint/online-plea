@@ -1,0 +1,18 @@
+/*
+List blocks
+*/
+
+$module: "list-block";
+
+.#{$module} {
+  display: block;
+  padding-left: em(20);
+
+  .list-item {
+    display: list-item;
+    list-style-position: outside;
+    margin-bottom: em(5);
+    text-transform: lowercase;
+  }
+
+}

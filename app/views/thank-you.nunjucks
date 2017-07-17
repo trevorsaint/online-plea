@@ -1,0 +1,79 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{% if serviceName %}<span class="heading-secondary">{{serviceName}}</span>{% endif %} {{pageTitle}}</h1>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <span class="form-label-bold">Overall, how did you feel about the service you received today?</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="very-satisfied" name="serviceFeedback" type="radio" value="Very satisfied">
+              <label for="very-satisfied">Very satisfied</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="satisfied" name="serviceFeedback" type="radio" value="Satisfied">
+              <label for="satisfied">Satisfied</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="neutral" name="serviceFeedback" type="radio" value="Neutral">
+              <label for="neutral">Neutral</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="unsatisfied" name="serviceFeedback" type="radio" value="Unsatisfied">
+              <label for="unsatisfied">Unsatisfied</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="very-unsatisfied" name="serviceFeedback" type="radio" value="Very unsatisfied">
+              <label for="very-unsatisfied">Very unsatisfied</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="improve-service">
+            How could we improve this service?
+            <span class="form-hint">Please don&rsquo;t include any person or financial information, for example your National Insurance number or credit card numbers</span>
+          </label>
+          <textarea class="form-control form-control-3-4" id="improve-service" name="improveService" cols="30" rows="4"></textarea>
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Send feedback</button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content_gov.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,18 @@
+/*
+Dividers
+*/
+
+$module: "divider";
+
+.#{$module} {
+
+  &-gutter-large {
+
+    @include media(desktop) {
+      margin-top: ($gutter*2);
+      margin-bottom: ($gutter*2);
+    }
+
+  }
+
+}

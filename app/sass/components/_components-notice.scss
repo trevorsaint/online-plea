@@ -1,0 +1,14 @@
+/*
+Notice
+*/
+
+$module: "notice";
+
+.#{$module} {
+
+  &-gutter-large {
+    margin-top: ($gutter);
+    margin-bottom: ($gutter);
+  }
+
+}

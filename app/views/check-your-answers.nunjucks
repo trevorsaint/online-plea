@@ -1,0 +1,166 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <div class="panel panel-border-wide" role="note" aria-label="Information">
+        <p>Make sure all the information you&rsquo;ve given is correct. If it&rsquo;s false or misleading, you may be:</p>
+        <ul class="list list-bullet">
+          <li>fined &pound;2,500</li>
+          <li>sent to prison for 3 months</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+  <div class="check-answers">
+
+    <h2 class="heading-medium">Your details</h2>
+
+    <table class="table">
+      <caption class="visually-hidden">Your details</caption>
+      <tr>
+        <th scope="row">Name</th>
+        <td>{{firstName}} {{lastName}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Address</th>
+        <td>{{address1}}<br>{{town}}<br>{{postcode}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Home telephone</th>
+        <td>{{homeTelephone}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Mobile</th>
+        <td>{{mobile}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Email</th>
+        <td>{{emailAddress}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Date of birth</th>
+        <td>{{dateOfBirth}}</td>
+      </tr>
+      <tr>
+        <th scope="row">National Insurance number</th>
+        <td>{{nationalInsuranceNumber}}</td>
+      </tr>
+    </table>
+
+    <p class="check-answers-action"><a href="/your-details">Change<span class="visually-hidden"> answers for &ldquo;Your details&rdquo;.</span></a></p>
+
+  </div>
+
+  <div class="check-answers">
+
+    <h2 class="heading-medium">Your plea</h2>
+
+    <table class="table">
+      <caption class="visually-hidden">Your plea</caption>
+      <tr>
+        <th scope="row">Plea</th>
+        <td>Guilty</td>
+      </tr>
+      <tr>
+        <th scope="row">How to complete case</th>
+        <td>Online</td>
+      </tr>
+      <tr>
+        <th scope="row">Information for magistrates</th>
+        <td>I&rsquo;d accidentally picked up my partner&rsquo;s oyster card instead of mine for a few days in a row. It was a genuine mistake.</td>
+      </tr>
+    </table>
+
+    <p class="check-answers-action"><a href="/your-plea">Change<span class="visually-hidden"> answers for &ldquo;Your plea&rdquo;.</span></a></p>
+
+  </div>
+
+  <div class="check-answers">
+
+    <h2 class="heading-medium">Your finances</h2>
+
+    <div class="check-answers">
+
+      <h3 class="bold-small">Employment</h3>
+
+      <table class="table">
+        <caption class="visually-hidden">Your employment</caption>
+        <tr>
+          <th scope="row">Montly pay</th>
+          <td>&pound;615</td>
+        </tr>
+        <tr>
+          <th scope="row">Employment status</th>
+          <td>Employed</td>
+        </tr>
+        <tr>
+          <th scope="row">Claiming benefits</th>
+          <td>No</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/employment">Change<span class="visually-hidden"> answers for &ldquo;Your finances&rdquo;.</span></a></p>
+
+    </div>
+
+    <div class="check-answers">
+
+      <h3 class="bold-small">Your outgoings</h3>
+
+      <table class="table">
+        <caption class="visually-hidden">Your outgoings</caption>
+        <tr>
+          <th scope="row">Monthly amount</th>
+          <td>&pound;850</td>
+        </tr>
+      </table>
+
+      <p class="check-answers-action"><a href="/your-outgoings">Change<span class="visually-hidden"> answers for &ldquo;Your outgoings&rdquo;.</span></a></p>
+
+    </div>
+
+  </div>
+
+  <form class="form" method="post" novalidate>
+
+    <h2 class="heading-medium">Add a note (optional)</h2>
+
+    <p>This will only be seen by court staff.</p>
+
+    <div class="form-group">
+      <label class="visually-hidden" for="additional-notes">
+        Additional notes for court staff
+      </label>
+      <textarea class="form-control form-control-3-4" id="additional-notes" name="additionalNotes" cols="30" rows="4"></textarea>
+    </div>
+
+    <div class="form-group form-group-related">
+      <button class="button" type="submit">Confirm and continue</button>
+    </div>
+
+    <p><a href="/">Back</a></p>
+
+  </form>
+
+</main>
+{% endblock %}

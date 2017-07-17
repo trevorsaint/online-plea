@@ -1,0 +1,61 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group form-group-compound">
+          <label class="form-label-bold" for="reference-number">
+            Case or Unique Reference Number
+          </label>
+          <input class="form-control" id="reference-number" name="referenceNumber" type="text">
+        </div>
+
+        <details class="details">
+
+          <summary><span class="summary">Where to find this on your notice</span></summary>
+
+          <div class="panel panel-border-narrow">
+            <img class="img-responsive" src="/public/images/sjp-notice.png" srcset="/public/images/sjp-notice.png 1x, /public/images/sjp-notice@2x.png 2x" alt="You can find the case or unique reference number at the top of your notice opposite your address.">
+          </div>
+
+        </details>
+
+        <div class="form-group">
+          <label class="form-label-bold" for="your-postcode">
+            Your postcode, as shown on your notice
+          </label>
+          <input class="form-control form-control-1-3" id="your-postcode" name="yourPostcode" type="text">
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <p class="lede">You must provide details of your finances.</p>
+
+      <p>If you need to pay a penalty, then the court will decide the amount based on:</p>
+
+      <ul class="list list-bullet">
+        <li>your finances</li>
+        <li>the seriousness of the offence</li>
+      </ul>
+
+      <p class="notice notice-gutter-large">
+        <i class="icon icon-important"><span class="visually-hidden">Warning</span></i>
+        <strong>If you give false or misleading information, you may be fined &pound;2500 or sent to prison for 3 months.</strong>
+      </p>
+
+      <p>Your financial details will be kept securely and only used by court staff.</p>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="/">Back</a></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

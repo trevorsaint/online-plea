@@ -1,0 +1,75 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/breadcrumb.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <p class="lede">Use this service to plead guilty or not guilty online.</p>
+
+      <p>You must be either:</p>
+
+      <ul class="list list-bullet">
+        <li>the person charged with the offence</li>
+        <li>an official representative of the company charged with the offence</li>
+      </ul>
+
+      <form class="form" method="post" novalidate>
+
+        <div class="form-group">
+
+          <fieldset>
+
+            <legend>
+              <span class="form-label-bold">Who sent you a notice?</span>
+            </legend>
+
+            <div class="multiple-choice">
+              <input id="the-police" name="sentNotice" type="radio" value="The police">
+              <label for="the-police">The police (traffic offence)</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="transport-for-london" name="sentNotice" type="radio" value="Transport for London">
+              <label for="transport-for-london">Transport for London</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+          <button class="button button-start" type="submit">Start now</button>
+        </div>
+
+      </form>
+
+      <h2 class="heading-medium">Before you start</h2>
+
+      <p>To use this service you need:</p>
+
+      <ul class="list list-bullet">
+        <li>the Single Justice Procedure notice sent to you</li>
+        <li>your National Insurance number</li>
+        <li>details of your income</li>
+      </ul>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

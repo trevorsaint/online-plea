@@ -1,0 +1,56 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+      <div class="panel panel-border-wide" role="note" aria-label="Information">
+        <p>Before you call make sure you have the Single Justice Procedure notice you were sent. You&rsquo;ll need to confirm details from this.</p>
+      </div>
+
+      <h2 class="heading-medium">If you think you shouldn&rsquo;t have been prosecuted</h2>
+
+      <h3 class="heading-small">Contact Transport for London</h3>
+
+      <ul class="list">
+        <li>Telephone: xxxx xxxxxxxx (<abbr title="To be confirmed">TBC</abbr>)</li>
+        <li>Monday to Friday 7am to 10pm (<abbr title="To be confirmed">TBC</abbr>)</li>
+        <li>Saturday, 9am to 12pm (<abbr title="To be confirmed">TBC</abbr>)</li>
+      </ul>
+
+      <h2 class="heading-medium">Legal advice</h2>
+
+      <p>You can get help from either:</p>
+
+      <ul class="list list-bullet">
+        <li><a href="/">a solicitor</a></li>
+        <li><a href="/">Citizens Advice</a></li>
+      </ul>
+
+      <h2 class="heading-medium">Help with this online service or the court process</h2>
+
+      <h3 class="heading-small">Contact Lavender Hill Magistrates</h3>
+
+      <ul class="list">
+        <li>Telephone: xxxx xxxxxxxx (<abbr title="To be confirmed">TBC</abbr>)</li>
+        <li>Monday to Friday 7am to 10pm (<abbr title="To be confirmed">TBC</abbr>)</li>
+        <li>Saturday, 9am to 12pm (<abbr title="To be confirmed">TBC</abbr>)</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}
