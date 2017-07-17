@@ -10,7 +10,7 @@
   "private": "true",
   "license": "MIT",
   "engines": {
-    "node": ">=8.0.0"
+    "node": "8.1.x"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
