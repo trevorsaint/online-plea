@@ -10,7 +10,7 @@
   "private": "true",
   "license": "MIT",
   "engines": {
-    "node": ">=8.1.4"
+    "node": ">=8.0.0"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -20,8 +20,8 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "govuk-elements-sass": "^3.1.1",
-    "govuk_frontend_toolkit": "^6.0.4",
-    "govuk_template_jinja": "0.22.2",
+    "govuk_frontend_toolkit": "^7.0.0",
+    "govuk_template_jinja": "0.22.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cache": "^0.4.6",
