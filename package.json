@@ -10,7 +10,7 @@
   "private": "true",
   "license": "MIT",
   "engines": {
-    "node": ">=7.10.1"
+    "node": ">=8.1.4"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -19,7 +19,7 @@
     "del": "^3.0.0",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
-    "govuk-elements-sass": "^3.1.0",
+    "govuk-elements-sass": "^3.1.1",
     "govuk_frontend_toolkit": "^6.0.4",
     "govuk_template_jinja": "0.22.2",
     "gulp": "^3.9.1",
@@ -41,6 +41,7 @@
     "gulp-data": "^1.2.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "gulp develop",
+    "heroku-postbuild": "gulp build"
   }
 }
