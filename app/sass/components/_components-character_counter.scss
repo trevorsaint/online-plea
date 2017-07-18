@@ -1,0 +1,22 @@
+/*
+Character counter
+*/
+
+$module: "character-counter";
+
+.#{$module} {
+  @include core-16;
+  color: $secondary-text-colour;
+  margin-top: em(10,16);
+  margin-bottom: em(20,16);
+
+  &-warning {
+    color: $error-colour;
+  }
+
+  &-over {
+    color: $error-colour;
+    font-weight: bold;
+  }
+
+}

@@ -14,9 +14,8 @@
     <div class="column-two-thirds">
 
       <h1 class="heading-xlarge">{{pageTitle}}</h1>
-      
-      <p>Magistrates will decide on your sentence.</p>
-      <p>They can do this without a formal court hearing but you have the right to come to court, if you wish.</p>
+
+      <p>Magistrates will decide on your sentence. They can do this without a formal court hearing but you have the right to come to court, if you wish.</p>
       <p>They follow the same guidelines either way.</p>
 
       <form class="form" method="post" novalidate>
@@ -33,9 +32,9 @@
               <input id="online" name="guiltyPlea" type="radio" value="Online">
               <label for="online">
                 <span class="form-label-bold">Online</span>
-                <span class="list list-block">
-                  <span class="list-item">You usually don&rsquo;t need to attend court</span>
-                  <span class="list-item">You&rsquo;ll get an email with the magistrate&rsquo;s decision and any penalty</span>
+                <span class="list list-block" role="list">
+                  <span class="list-item" role="listitem">You usually don&rsquo;t need to attend court</span>
+                  <span class="list-item" role="listitem">You&rsquo;ll get an email with the magistrate&rsquo;s decision and any penalty</span>
                 </span>
               </label>
             </div>
@@ -44,9 +43,9 @@
               <input id="in-court" name="guiltyPlea" type="radio" value="In court">
               <label for="in-court">
                 <span class="form-label-bold">In court</span>
-                <span class="list list-block">
-                  <span class="list-item">You&rsquo;ll need to attend a court hearing to discuss your case</span>
-                  <span class="list-item">The hearing will take place in an open court and the public can attend</span>
+                <span class="list list-block" role="list">
+                  <span class="list-item" role="listitem">You&rsquo;ll need to attend a court hearing to discuss your case</span>
+                  <span class="list-item" role="listitem">The hearing will take place in an open court and the public can attend</span>
                 </span>
               </label>
             </div>
@@ -56,13 +55,18 @@
         </div>
 
         <h2 class="heading-medium">Enter information for magistrates (optional)</h2>
-        <p>You can explain why you committed the offence or tell them relevant personal circumstances. They&rsquo;ll take what you say into account when deciding on your sentence.</p>
+        <p class="text-secondary">You can explain why you committed the offence or tell them relevant personal circumstances. They&rsquo;ll take what you say into account when deciding on your sentence.</p>
 
         <div class="form-group">
           <label class="visually-hidden" for="information-magistrate">
             Information for magistrate
           </label>
-          <textarea class="form-control form-control-3-4" id="information-magistrate" name="informationMagistrate" cols="30" rows="4"></textarea>
+          <textarea class="form-control form-control-3-4" id="information-magistrate" name="informationMagistrate" cols="30" rows="4" data-maximum="500" aria-describedby="character-counter"></textarea>
+
+          <div class="character-counter character-counter-over-count" id="character-counter" aria-live="polite">
+            <span class="character-counter-count">500</span> characters remaining
+          </div>
+
         </div>
 
         <div class="form-group form-group-related">
