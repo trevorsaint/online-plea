@@ -16,7 +16,7 @@
       <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
       <div class="panel panel-border-wide" role="note" aria-label="Information">
-        <p>Before you call make sure you have the Single Justice Procedure notice you were sent. You&rsquo;ll need to confirm details from this.</p>
+        <p>Before you call, make sure you have the Single Justice Procedure notice you were sent. You&rsquo;ll need to confirm details from this.</p>
       </div>
 
       <h2 class="heading-medium">If you think you shouldn&rsquo;t have been prosecuted</h2>
