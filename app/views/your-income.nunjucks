@@ -21,7 +21,7 @@
 
           <label class="form-label-bold" for="average-monthly-income">
             Enter your average monthly income (after tax)
-            <span class="form-hint">Include earnings or pension but not benefits</span>
+            <span class="form-hint">Include earnings, pension, benefits and any other income</span>
           </label>
 
           <div class="form-currency">
@@ -32,13 +32,47 @@
 
         <div class="form-group">
 
+          <fieldset>
+
+            <legend class="form-label-bold">
+              Employment status
+              <span class="form-hint">Tick any that apply to you</span>
+            </legend>
+
+            <div class="multiple-choice" data-target="employed">
+              <input id="employment-status-employed" name="employmentStatus" type="checkbox" value="Employed">
+              <label for="employment-status-employed">Employed</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="employment-self-employed" name="employmentStatus" type="checkbox" value="Self employed">
+              <label for="employment-self-employed">Self&ndash;employed</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="employment-unemployed" name="employmentStatus" type="checkbox" value="Unemployed">
+              <label for="employment-unemployed">Unemployed</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="employment-status-other" name="employmentStatus" type="checkbox" value="Other">
+              <label for="employment-status-other">Other (for example, retired, student)</label>
+            </div>
+
+          </fieldset>
+
+        </div>
+
+        <div class="form-group">
+
           <fieldset class="inline">
 
             <legend>
-              <span class="form-label-bold">Are you claiming Jobseeker&rsquo;s Allowance, Income Support, Universal Credit or Employment Support Allowance?</span>
+              <span class="form-label-bold">Are you claiming any benefits?</span>
+              <span class="form-hint">If you get Child Benefit, answer 'no'</span>
             </legend>
 
-            <div class="multiple-choice">
+            <div class="multiple-choice" data-target="receiving-benefits">
               <input id="claiming-benefits-yes" name="claimingBenefits" type="radio" value="Yes">
               <label for="claiming-benefits-yes">Yes</label>
             </div>
@@ -46,6 +80,15 @@
             <div class="multiple-choice">
               <input id="claiming-benefits-no" name="claimingBenefits" type="radio" value="No">
               <label for="claiming-benefits-no">No</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="receiving-benefits">
+
+              <div class="form-group">
+                <label for="benefits">Which benefits are you claiming?</label>
+                <textarea class="form-control form-control-3-4" id="benefits" name="benefits" rows="2"></textarea>
+              </div>
+
             </div>
 
           </fieldset>
@@ -56,7 +99,9 @@
           <button class="button" type="submit">Continue</button>
         </div>
 
-        <p><a href="/">Back</a></p>
+        <p><a href="{{backURL}}">Back</a></p>
+
+        <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
 
       </form>
 

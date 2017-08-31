@@ -21,7 +21,7 @@
 
         <ul class="list list-bullet">
           <li>all evidence is in the notice sent to you</li>
-          <li>if you plead guilty, we may reduce your penalty</li>
+          <li>if you plead guilty, we may reduce your fine by up to 33&#37;</li>
         </ul>
 
       </div>
@@ -76,7 +76,9 @@
           <button class="button" type="submit">Continue</button>
         </div>
 
-        <p><a href="/">Back</a></p>
+        <p><a href="{{backURL}}">Back</a></p>
+
+        <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
 
       </form>
 

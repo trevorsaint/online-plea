@@ -22,25 +22,25 @@
           <fieldset class="inline">
 
             <legend>
-              <span class="form-label-bold">Do you need an interpreter in court?</span>
+              <span class="form-label-bold">If you need to pay a penalty, would you like us to deduct it from your benefits?</span>
             </legend>
 
-            <div class="multiple-choice" data-target="yes-interpreter-language">
-              <input id="yes-interpreter" name="interpreter" type="radio" value="Yes">
-              <label for="yes-interpreter">Yes</label>
-            </div>
-
             <div class="multiple-choice">
-              <input id="no-interpreter" name="interpreter" type="radio" value="No">
-              <label for="no-interpreter">No</label>
+              <input id="yes-benefits-penalty" name="benefitsPenalty" type="radio" value="Yes">
+              <label for="yes-benefits-penalty">Yes</label>
             </div>
 
-            <div class="panel panel-border-narrow js-hidden" id="yes-interpreter-language">
-              <label for="interpreter-language">
-                <span class="form-label">Which language?</span>
-                <span class="form-hint">You can include sign language</span>
-              </label>
-              <input class="form-control form-control-3-4" id="interpreter-language" name="interpreterLanguage" type="text">
+            <div class="multiple-choice" data-target="no-benefits">
+              <input id="no-benefits-penalty" name="benefitsPenalty" type="radio" value="No">
+              <label for="no-benefits-penalty">No</label>
+            </div>
+
+            <div class="panel panel-border-narrow js-hidden" id="no-benefits">
+              <p>Please note we can deduct without your agreement if:</p>
+              <ul class="list list-bullet">
+                <li>you&rsquo;ve failed to pay a penalty in the past</li>
+                <li>the court orders you to pay compensation</li>
+              </ul>
             </div>
 
           </fieldset>

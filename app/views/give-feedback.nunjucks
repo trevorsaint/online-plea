@@ -12,7 +12,7 @@
 
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">{% if serviceName %}<span class="heading-secondary">{{serviceName}}</span>{% endif %} {{pageTitle}}</h1>
+      <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
       <form class="form" method="post" novalidate>
 
@@ -36,17 +36,17 @@
 
             <div class="multiple-choice">
               <input id="neutral" name="serviceFeedback" type="radio" value="Neutral">
-              <label for="neutral">Neutral</label>
+              <label for="neutral">Neither satisfied or dissatisfied</label>
             </div>
 
             <div class="multiple-choice">
-              <input id="unsatisfied" name="serviceFeedback" type="radio" value="Unsatisfied">
-              <label for="unsatisfied">Unsatisfied</label>
+              <input id="dissatisfied" name="serviceFeedback" type="radio" value="Dissatisfied">
+              <label for="dissatisfied">Dissatisfied</label>
             </div>
 
             <div class="multiple-choice">
-              <input id="very-unsatisfied" name="serviceFeedback" type="radio" value="Very unsatisfied">
-              <label for="very-unsatisfied">Very unsatisfied</label>
+              <input id="very-dissatisfied" name="serviceFeedback" type="radio" value="Very dissatisfied">
+              <label for="very-dissatisfied">Very dissatisfied</label>
             </div>
 
           </fieldset>
@@ -67,10 +67,6 @@
 
       </form>
 
-    </div>
-
-    <div class="column-one-third">
-      {% include "partials/related_content_gov.nunjucks" ignore missing %}
     </div>
 
   </div>

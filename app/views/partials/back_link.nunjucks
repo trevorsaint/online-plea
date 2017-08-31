@@ -1,1 +1,1 @@
-<a class="link-back" href="/">Back</a>
+<a class="link-back" href="{{backURL}}">Back</a>

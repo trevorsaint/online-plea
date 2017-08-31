@@ -1,0 +1,102 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+  {% include "partials/back_link.nunjucks" ignore missing %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <form class="form" method="post" novalidate>
+
+        <h1 class="heading-xlarge">{{pageTitle}}</h1>
+
+        <h2 class="heading-medium">Employer details (optional)</h2>
+
+        <div class="form-group">
+
+          <details>
+
+            <summary><span class="summary">Why are we asking for these details?</span></summary>
+
+            <div class="panel panel-border-narrow">
+
+              <p>The court may deduct a penalty from your earnings if:</p>
+
+              <ul class="list list-bullet">
+                <li>you&rsquo;ve failed to pay in the past</li>
+                <li>you&rsquo;re ordered to pay compensation, as part of your penalty</li>
+              </ul>
+
+            </div>
+
+          </details>
+
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="employee-number">Employee number</label>
+          <input class="form-control" id="employee-number" name="employeeNumber" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="employer-name">Employer name</label>
+          <input class="form-control form-control-3-4" id="employer-name" name="employerName" type="text">
+        </div>
+
+        <div class="form-group form-group-compound">
+          <label class="form-label" for="employer-address-line-1">Building and street</label>
+          <input class="form-control form-control-3-4" id="employer-address-line-1" name="employerAddressLine1" type="text">
+        </div>
+
+        <div class="form-group form-group-compound">
+          <label class="visually-hidden" for="employer-address-line-2">Building and street address line 2</label>
+          <input class="form-control form-control-3-4" id="employer-address-line-2" name="employerAddressLine2" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="visually-hidden" for="employer-address-line-3">Building and street address line 3</label>
+          <input class="form-control form-control-3-4" id="employer-address-line-3" name="employerAddressLine3" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="employer-town-or-city">Town or city</label>
+          <input class="form-control" id="employer-town-or-city" name="employerTownOrCity" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="employer-postcode">Postcode</label>
+          <input class="form-control form-control-1-4" id="employer-postcode" name="employerPostcode" type="text">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="employer-telephone">Employer telephone</label>
+          <input class="form-control" id="employer-telephone" name="employerTelephone" type="tel">
+        </div>
+
+        <div class="form-group form-group-related">
+          <button class="button" type="submit">Continue</button>
+        </div>
+
+        <p><a href="{{backURL}}">Back</a></p>
+
+        <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
+
+      </form>
+
+    </div>
+
+    <div class="column-one-third">
+      {% include "partials/related_content.nunjucks" ignore missing %}
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

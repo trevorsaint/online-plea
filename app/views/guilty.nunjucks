@@ -15,7 +15,9 @@
 
       <h1 class="heading-xlarge">{{pageTitle}}</h1>
 
-      <p>Magistrates will decide on your sentence. They can do this without a formal court hearing but you have the right to come to court, if you wish.</p>
+      <p>Magistrates will decide on your sentence.</p>
+
+      <p>They can do this without a formal court hearing but you have the right to come to court, if you wish.</p>
       <p>They follow the same guidelines either way.</p>
 
       <form class="form" method="post" novalidate>
@@ -61,11 +63,7 @@
           <label class="visually-hidden" for="information-magistrate">
             Information for magistrate
           </label>
-          <textarea class="form-control form-control-3-4" id="information-magistrate" name="informationMagistrate" cols="30" rows="4" data-maximum="500" aria-describedby="character-counter"></textarea>
-
-          <div class="character-counter character-counter-over-count" id="character-counter" aria-live="polite">
-            <span class="character-counter-count">500</span> characters remaining
-          </div>
+          <textarea class="form-control form-control-3-4" id="information-magistrate" name="informationMagistrate" cols="30" rows="4"></textarea>
 
         </div>
 
@@ -73,7 +71,9 @@
           <button class="button" type="submit">Continue</button>
         </div>
 
-        <p><a href="/">Back</a></p>
+        <p><a href="{{backURL}}">Back</a></p>
+
+        <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
 
       </form>
 

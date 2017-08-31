@@ -106,7 +106,9 @@
           <button class="button" type="submit">Continue</button>
         </div>
 
-        <p><a href="/">Back</a></p>
+        <p><a href="{{backURL}}">Back</a></p>
+
+        <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
 
       </form>
 

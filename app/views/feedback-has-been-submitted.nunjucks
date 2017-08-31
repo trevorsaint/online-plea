@@ -1,0 +1,29 @@
+{% set title = pageTitle %}
+{% extends "layout.nunjucks" %}
+
+{% block page_title %}{{pageTitle}} - GOV.UK{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+  {% include "partials/phase_banner.nunjucks" ignore missing %}
+
+  <div class="govuk-box-highlight">
+    <h1 class="bold-large">{{pageTitle}}</h1>
+  </div>
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <form class="form" method="post" novalidate>
+        <button class="button" type="submit">Finish</button>
+      </form>
+
+    </div>
+
+  </div>
+
+
+</main>
+{% endblock %}

@@ -101,12 +101,12 @@
 
     <div class="check-answers">
 
-      <h3 class="bold-small" id="your-employment">Employment</h3>
+      <h3 class="bold-small" id="your-employment">Your employment</h3>
 
       <table class="table">
         <caption class="visually-hidden">Your employment</caption>
         <tr>
-          <th scope="row">Montly pay</th>
+          <th scope="row">Montly income (after tax)</th>
           <td>&pound;615</td>
         </tr>
         <tr>
@@ -114,12 +114,16 @@
           <td>Employed</td>
         </tr>
         <tr>
-          <th scope="row">Claiming benefits</th>
+          <th scope="row">Your employer</th>
+          <td>Ministry of Justice</td>
+        </tr>
+        <tr>
+          <th scope="row">Claiming benefits?</th>
           <td>No</td>
         </tr>
       </table>
 
-      <p class="check-answers-action"><a href="/employment" aria-labelledby="your-employment">Change</a></p>
+      <p class="check-answers-action"><a href="/your-income" aria-labelledby="your-employment">Change</a></p>
 
     </div>
 
@@ -143,22 +147,13 @@
 
   <form class="form" method="post" novalidate>
 
-    <h2 class="heading-medium">Add a note (optional)</h2>
-
-    <p>This will only be seen by court staff.</p>
-
-    <div class="form-group">
-      <label class="visually-hidden" for="additional-notes">
-        Additional notes for court staff
-      </label>
-      <textarea class="form-control form-control-3-4" id="additional-notes" name="additionalNotes" cols="30" rows="4"></textarea>
-    </div>
-
     <div class="form-group form-group-related">
       <button class="button" type="submit">Confirm and continue</button>
     </div>
 
-    <p><a href="/">Back</a></p>
+    <p><a href="{{backURL}}">Back</a></p>
+
+    <p class="font-xsmall text-secondary">Back link: <b>{{backURL}}</b></p>
 
   </form>
 

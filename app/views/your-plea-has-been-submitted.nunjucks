@@ -8,15 +8,15 @@
 
   {% include "partials/phase_banner.nunjucks" ignore missing %}
 
+  <div class="govuk-box-highlight">
+    <h1 class="heading-xlarge">{{pageTitle}}</h1>
+    <p class="font-large">Your case reference number is <br> <strong class="bold">HDJ2123F</strong></p>
+    <p><b>You&rsquo;ll need to quote this if you contact the court.</b></p>
+  </div>
+
   <div class="grid-row">
 
     <div class="column-two-thirds">
-
-      <div class="alert alert--submitted">
-        <h1 class="bold-large">{{pageTitle}}</h1>
-        <p>Your case reference number is <br> <strong class="heading-medium">HDJ2123F</strong></p>
-        <p>You&rsquo;ll need to quote this if you contact the court.</p>
-      </div>
 
       <h2 class="heading-medium">What happens next?</h2>
 
