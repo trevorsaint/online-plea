@@ -3,7 +3,7 @@ const express    = require('express')
 const session    = require('express-session')
 const nunjucks   = require('nunjucks')
 
-const routes     = require('./app/routes.js')
+const routes     = require('./app/routes')
 const port       = process.env.PORT || 3000
 
 const cookieParser = require('cookie-parser')
@@ -71,7 +71,7 @@ app.use((req, res, next) => {
 
 
 // locals
-app.locals = require('./app/locals.js')
+app.locals = require('./app/locals')
 
 
 // Routes
