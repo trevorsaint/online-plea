@@ -7,7 +7,7 @@
     "name": "Trevor Saint",
     "email": "hello@trevorsaint.com"
   },
-  "private": "true",
+  "private": true,
   "license": "MIT",
   "engines": {
     "node": "8.1.x",
