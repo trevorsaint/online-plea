@@ -1,7 +1,6 @@
 {% extends "govuk_template.html" %}
 
 {% block head %}
-  <meta name="robots" content="noindex, nofollow>
   {% include "stylesheets.nunjucks" %}
 {% endblock %}
 
